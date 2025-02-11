@@ -1,4 +1,6 @@
+import 'package:ecommerce_app/core/utils/app_color.dart';
 import 'package:ecommerce_app/core/utils/app_images.dart';
+import 'package:ecommerce_app/core/utils/app_text_styles.dart';
 import 'package:ecommerce_app/features/on_boarding/presentation/views/widgets/page_view_item.dart';
 import 'package:flutter/material.dart';
 
@@ -11,13 +13,17 @@ final PageController pageController;
       controller: pageController,
       children:   [
 PageViewItem(
-  isVisible: (pageController.hasClients?pageController.page!.round() :0 )==0 ,
-    title:const Row(
+  isVisible: true,
+  //(pageController.hasClients?pageController.page!.round() :0 )==0 ,
+    title:  Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        Text("مرحبًا بك في",style: TextStyle(color: Colors.black,fontSize: 20),),
-        Text("Fruit",style: TextStyle(color: Colors.green,fontSize: 20),),
-  Text("HUB"),
+        const Text("مرحبًا بك في",style: AppTextStyles.bold23,),
+        const SizedBox(width: 2,),
+        Text(" HUB",style: AppTextStyles.bold23.copyWith(  color: AppColors.secondaryColor,),),
+
+        Text("Fruit",style: AppTextStyles.bold23.copyWith( color:AppColors.primaryColor,),),
+
 
 
       ],
@@ -26,9 +32,10 @@ PageViewItem(
     image:AppImages.pageViewItem1Image,
     backgroundImage: AppImages.pageViewItem1background
 ),
-        PageViewItem(
-            isVisible: (pageController.hasClients?pageController.page!.round() :0 )!=1 ,
-            title:const Text("ابحث وتسوق",textAlign: TextAlign.center,),
+        const PageViewItem(
+            isVisible:false,
+            //(pageController.hasClients?pageController.page!.round() :0 )!=1 ,
+            title: Text("ابحث وتسوق",textAlign: TextAlign.center,style: AppTextStyles.bold23,),
             subtitle:"نقدم لك أفضل الفواكه المختارة بعناية. اطلع على التفاصيل والصور والتقييمات لتتأكد من اختيار الفاكهة المثالية",
             image:AppImages.pageViewItem2Image,
             backgroundImage: AppImages.pageViewItem2background

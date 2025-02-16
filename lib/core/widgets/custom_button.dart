@@ -1,5 +1,6 @@
 
 import 'package:ecommerce_app/core/utils/app_color.dart';
+import 'package:ecommerce_app/core/utils/app_text_styles.dart';
 import 'package:flutter/material.dart';
 class CustomButton extends StatelessWidget {
   const CustomButton({super.key,
@@ -12,7 +13,7 @@ class CustomButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return SizedBox(
       width: double.infinity,
-     // height: 48,
+      height: 54,
       child: TextButton(
         style: TextButton.styleFrom(
           backgroundColor: AppColors.primaryColor,
@@ -20,7 +21,7 @@ class CustomButton extends StatelessWidget {
           borderRadius:BorderRadius.circular(15),
         )),
           onPressed:onPressed,
-          child:Text(text,style: const TextStyle(color: Colors.white),)),
+          child:Text(text,style: AppTextStyles.bold16.copyWith(color: Colors.white),) ,),
     );
   }
 }

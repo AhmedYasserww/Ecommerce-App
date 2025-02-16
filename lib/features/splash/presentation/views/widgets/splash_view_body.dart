@@ -38,7 +38,7 @@ Align(
   }
   void executeNavigation() {
     bool isOnboardingViewSeen = Prefs.getBool(kIsOnboardingViewSeen);
-    Future.delayed(const Duration(seconds: 3), () {
+    Future.delayed(const Duration(seconds:4), () {
       if (isOnboardingViewSeen) {
         Navigator.pushReplacementNamed(context, LogInView.routeName);
       }

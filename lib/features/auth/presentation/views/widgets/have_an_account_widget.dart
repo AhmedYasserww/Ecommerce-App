@@ -1,10 +1,9 @@
 import 'package:ecommerce_app/core/utils/app_color.dart';
 import 'package:ecommerce_app/core/utils/app_text_styles.dart';
-import 'package:ecommerce_app/features/auth/presentation/views/sign_up_view.dart';
+import 'package:ecommerce_app/features/auth/presentation/views/log_in_view.dart';
 import 'package:flutter/material.dart';
-
-class DoNotHaveAnAccountWidget extends StatelessWidget {
-  const DoNotHaveAnAccountWidget({super.key});
+class HaveAnAccountWidget extends StatelessWidget {
+  const HaveAnAccountWidget({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -12,7 +11,7 @@ class DoNotHaveAnAccountWidget extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Text(
-          'لا تمتلك حساب؟',
+          'تمتلك حساب بالفعل؟',
           style: AppTextStyles.semiBold16.copyWith(
             color: const Color(0xFF949D9E),
           ),
@@ -20,13 +19,13 @@ class DoNotHaveAnAccountWidget extends StatelessWidget {
         const SizedBox(width: 5),
         TextButton(
           onPressed: () {
-             Navigator.of(context).pushNamed(SignUpView.routeName);
+Navigator.of(context).pop();
           },
           style: TextButton.styleFrom(
             padding: EdgeInsets.zero,
           ),
           child: Text(
-            'قم بانشاء حساب',
+            'تسجيل دخول',
             style: AppTextStyles.semiBold16.copyWith(
               color: AppColors.primaryColor,
             ),

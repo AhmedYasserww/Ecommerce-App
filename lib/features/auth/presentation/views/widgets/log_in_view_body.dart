@@ -67,7 +67,7 @@ class _LogInViewBodyState extends State<LogInViewBody> {
             ),
             const SizedBox(height: 33,),
             const DoNotHaveAnAccountWidget(),
-            SizedBox(
+            const SizedBox(
               height: 37,
             ),
             const OrDivider(),

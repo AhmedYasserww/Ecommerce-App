@@ -20,6 +20,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       theme:  ThemeData(
         scaffoldBackgroundColor: Colors.white,
+
         fontFamily: 'Cairo',
          colorScheme: ColorScheme.fromSeed(
              seedColor:AppColors.primaryColor

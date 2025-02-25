@@ -13,6 +13,7 @@ abstract class AppTextStyles {
   static const TextStyle semiBold13 = TextStyle(
     fontWeight: FontWeight.w600,
     fontSize: 13,
+    fontFamily: 'Cairo',
   );
 
   static const TextStyle regular13 = TextStyle(

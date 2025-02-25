@@ -10,4 +10,6 @@ class AppImages {
   static const String appleIcon = 'assets/images/apple_icon.svg';
   static const String faceBookIcon = 'assets/images/face_book_icon.svg';
   static const String googleIcon = 'assets/images/google_icon.svg';
+  static const String checkIcon = 'assets/images/check.svg';
+
 }

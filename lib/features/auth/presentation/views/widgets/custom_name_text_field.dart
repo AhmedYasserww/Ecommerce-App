@@ -10,7 +10,7 @@ class NameField extends StatelessWidget {
     return CustomTextField(
       controller: nameController,
       validator: (value) => value == null || value.isEmpty ? 'Field is required' : null,
-     hintText: "Enter Your Username",
+     hintText: "الاسم كامل",
     );
   }
 }

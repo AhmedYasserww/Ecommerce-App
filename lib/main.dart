@@ -2,11 +2,16 @@ import 'package:ecommerce_app/core/helper_functions/on_generate_routes.dart';
 import 'package:ecommerce_app/core/services/shared_preferences_singleton.dart';
 import 'package:ecommerce_app/core/utils/app_color.dart';
 import 'package:ecommerce_app/features/splash/presentation/views/splash_view.dart';
+import 'package:ecommerce_app/firebase_options.dart';
 import 'package:ecommerce_app/generated/l10n.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 void main() async{
   WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
   await Prefs.init();
   Prefs.instance;
   runApp(const MyApp());

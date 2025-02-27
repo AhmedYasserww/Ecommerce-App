@@ -1,11 +1,10 @@
-
-import 'package:ecommerce_app/features/auth/presentation/views/widgets/log_in_view_body.dart';
+import 'package:ecommerce_app/features/auth/presentation/views/widgets/sign_in_view_body_bloc_consumer.dart';
 import 'package:flutter/material.dart';
 
 import '../../../../core/widgets/custom_app_bar.dart';
 
-class LogInView extends StatelessWidget {
-  const LogInView({super.key});
+class SignInView extends StatelessWidget {
+  const SignInView({super.key});
 static const String routeName = 'LogInView';
   @override
   Widget build(BuildContext context) {
@@ -13,10 +12,11 @@ static const String routeName = 'LogInView';
       appBar:CustomAppBar(
         title: "'تسجيل دخول'",
       ) ,
-      body: LogInViewBody(),
+      body: SignInViewBodyBlocConsumer(),
     );
   }
 }
+
 
 
 

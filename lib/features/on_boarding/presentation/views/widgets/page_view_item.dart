@@ -1,6 +1,6 @@
 import 'package:ecommerce_app/constants.dart';
 import 'package:ecommerce_app/core/utils/app_text_styles.dart';
-import 'package:ecommerce_app/features/auth/presentation/views/log_in_view.dart';
+import 'package:ecommerce_app/features/auth/presentation/views/sign_in_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
@@ -31,7 +31,7 @@ SizedBox(
        GestureDetector(
          onTap: (){
            Prefs.setBool(kIsOnboardingViewSeen, true);
-           Navigator.of(context).pushReplacementNamed(LogInView.routeName);
+           Navigator.of(context).pushReplacementNamed(SignInView.routeName);
          },
          child: Padding(
           padding:  const EdgeInsets.all(16),

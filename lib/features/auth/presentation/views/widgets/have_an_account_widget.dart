@@ -1,6 +1,5 @@
 import 'package:ecommerce_app/core/utils/app_color.dart';
 import 'package:ecommerce_app/core/utils/app_text_styles.dart';
-import 'package:ecommerce_app/features/auth/presentation/views/log_in_view.dart';
 import 'package:flutter/material.dart';
 class HaveAnAccountWidget extends StatelessWidget {
   const HaveAnAccountWidget({super.key});

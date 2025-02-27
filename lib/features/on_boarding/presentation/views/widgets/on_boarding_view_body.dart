@@ -1,9 +1,7 @@
 import 'package:dots_indicator/dots_indicator.dart';
-import 'package:ecommerce_app/constants.dart';
-import 'package:ecommerce_app/core/services/shared_preferences_singleton.dart';
 import 'package:ecommerce_app/core/utils/app_color.dart';
 import 'package:ecommerce_app/core/widgets/custom_button.dart';
-import 'package:ecommerce_app/features/auth/presentation/views/log_in_view.dart';
+import 'package:ecommerce_app/features/auth/presentation/views/sign_in_view.dart';
 import 'package:ecommerce_app/features/on_boarding/presentation/views/widgets/on_boarding_page_view.dart';
 import 'package:flutter/material.dart';
 class OnBoardingViewBody extends StatefulWidget {
@@ -59,7 +57,7 @@ class _OnBoardingViewBodyState extends State<OnBoardingViewBody> {
             visible: currentIndex==1,
             child: CustomButton(
                 onPressed: (){
-                  Navigator.of(context).pushReplacementNamed(LogInView.routeName);
+                  Navigator.of(context).pushReplacementNamed(SignInView.routeName);
             },text:"ابدأ الان"),
           ),
         ),

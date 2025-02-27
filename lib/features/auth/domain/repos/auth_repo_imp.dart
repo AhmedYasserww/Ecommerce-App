@@ -1,3 +1,4 @@
+import 'dart:developer';
 import 'package:dartz/dartz.dart';
 import 'package:ecommerce_app/core/errors/exceptions.dart';
 import 'package:ecommerce_app/core/errors/failures.dart';
@@ -24,9 +25,10 @@ class AuthRepoImp implements AuthRepo {
       );
       return right(UserModel.fromFirebaseUser(user));
     } on CustomException catch (e) {
-      return left(ServerFailure(e.message));
+      return left(ServerFailure(errorMessage: e.message));
     } catch (e) {
-      return left(const ServerFailure("لقد حدث خطأ. الرجاء المحاولة مرة اخرى"));
+      log('Exception in AuthRepoImp.createUserWithEmailAndPassword: ${e.toString()}');
+      return left( ServerFailure(errorMessage: "لقد حدث خطأ. الرجاء المحاولة مرة اخرى"));
     }
   }
 }

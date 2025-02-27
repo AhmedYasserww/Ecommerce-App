@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:ecommerce_app/core/errors/exceptions.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
@@ -10,10 +12,16 @@ Future<User> createUserWithEmailAndPassword({ required String email, required St
     );
     return credential.user!;
   } on FirebaseAuthException catch (e) {
+    log('Exception in firebase auth service.createUserWithEmailAndPassword: ${e.toString()} and code: ${e.code}');
     if (e.code == 'weak-password') {
       throw CustomException(message: 'الرقم السرى ضعيف جدا');
-    } else if (e.code == 'email-already-in-use') {
-      throw CustomException(message: 'لقد قمت بالتسجيل مسبقا. الرجاء تسجيل الدخول');
+    }
+    else if (e.code == 'network-request-failed') {
+      throw CustomException(message: 'تأكد من اتصالك بالنترنت وأعد المحاوله مرة اخرى');
+
+    }
+    else if (e.code == 'email-already-in-use') {
+      throw CustomException(message: 'لقد قمت بالتسجيل مسبقا بهذا البريد الالكترونى. الرجاء تسجيل الدخول');
 
     }
     else{
@@ -21,6 +29,7 @@ Future<User> createUserWithEmailAndPassword({ required String email, required St
     }
 
   } catch (e) {
+    log('Exception in firebase auth service.createUserWithEmailAndPassword: ${e.toString()}');
     throw CustomException(message: 'لقد حدث خطأ. الرجاء المحاولة لاحقا');
   }
 }

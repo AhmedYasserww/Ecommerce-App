@@ -1,6 +1,7 @@
+// represent the data
 class UserEntity {
 final String email;
-final String password;
+final String name;
 final String uId;
-UserEntity(this.uId, {required this.email,required this.password});
+UserEntity({required this.uId, required this.email,required this.name});
 }

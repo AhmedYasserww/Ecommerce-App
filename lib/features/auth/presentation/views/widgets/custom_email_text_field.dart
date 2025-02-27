@@ -14,12 +14,12 @@ class EmailField extends StatelessWidget {
       controller: emailController,
       validator: (value) {
         if (value == null || value.isEmpty) {
-          return 'Field is required';
+          return 'هذا الحقل مطلوب';
         }
         final bool emailValid = RegExp(
           r'^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$',
         ).hasMatch(value);
-        return emailValid ? null : 'Email format must be valid';
+        return emailValid ? null : 'البريد الالكتروني غير صحيح';
       },
     );
   }

@@ -19,7 +19,7 @@ class PasswordField extends StatelessWidget {
       hintText: "كلمة المرور",
       controller: passwordController,
       obscureText: visible,
-      validator: (value) => value == null || value.isEmpty ? 'Field is required' : null,
+      validator: (value) => value == null || value.isEmpty ? 'ادخل كلمة المرور' : null,
       suffixIcon: IconButton(
         onPressed: toggleVisibility,
         icon: Icon(visible ? Icons.visibility_off : Icons.visibility,color: const Color(0xffC9CECF),),

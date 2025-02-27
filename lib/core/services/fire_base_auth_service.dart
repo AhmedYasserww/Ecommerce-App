@@ -11,17 +11,17 @@ Future<User> createUserWithEmailAndPassword({ required String email, required St
     return credential.user!;
   } on FirebaseAuthException catch (e) {
     if (e.code == 'weak-password') {
-      throw CustomException(message: 'The password provided is too weak.');
+      throw CustomException(message: 'الرقم السرى ضعيف جدا');
     } else if (e.code == 'email-already-in-use') {
-      throw CustomException(message: 'The account already exists for that email.');
+      throw CustomException(message: 'لقد قمت بالتسجيل مسبقا. الرجاء تسجيل الدخول');
 
     }
     else{
-      throw CustomException(message: 'Failed to create user. , try later');
+      throw CustomException(message: 'لقد حدث خطأ. الرجاء المحاولة مرة اخرى');
     }
 
   } catch (e) {
-    throw CustomException(message: 'Failed to create user. , try later');
+    throw CustomException(message: 'لقد حدث خطأ. الرجاء المحاولة لاحقا');
   }
 }
 }

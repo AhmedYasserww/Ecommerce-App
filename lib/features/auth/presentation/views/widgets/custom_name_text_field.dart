@@ -9,7 +9,7 @@ class NameField extends StatelessWidget {
   Widget build(BuildContext context) {
     return CustomTextField(
       controller: nameController,
-      validator: (value) => value == null || value.isEmpty ? 'Field is required' : null,
+      validator: (value) => value == null || value.isEmpty ? 'الاسم مطلوب' : null,
      hintText: "الاسم كامل",
     );
   }

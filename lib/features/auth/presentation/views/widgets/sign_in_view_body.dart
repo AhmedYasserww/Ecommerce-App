@@ -94,14 +94,25 @@ autoValidateMode = AutovalidateMode.always;
               const OrDivider(),
               const SizedBox(height: 16,),
               CustomSocialButton(
-                onPressed: (){},
+                onPressed: (){
+                  context.read<SignInCubit>().signInWithGoogle();
+                },
                 imagePath: AppImages.googleIcon,
                 text: "تسجيل بواسطة جوجل",
               ),
               const SizedBox(height: 16,),
-              CustomSocialButton(text: "تسجيل بواسطة أبل", onPressed: (){}, imagePath: AppImages.appleIcon),
+              CustomSocialButton(
+                  text: "تسجيل بواسطة أبل",
+                  onPressed: (){
+              }, imagePath: AppImages.appleIcon),
              const SizedBox(height: 16,),
-             CustomSocialButton(text: "تسجيل بواسطة فيسبوك", onPressed: (){}, imagePath: AppImages.faceBookIcon)
+             CustomSocialButton(
+                 text: "تسجيل بواسطة فيسبوك",
+                 onPressed: (){
+                   context.read<SignInCubit>().signInWithFacebook();
+                 },
+                 imagePath: AppImages.faceBookIcon
+             )
 
 
             ],

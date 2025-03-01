@@ -44,4 +44,28 @@ class AuthRepoImp implements AuthRepo {
       return left( ServerFailure(errorMessage: "لقد حدث خطأ. الرجاء المحاولة مرة اخرى"));
     }
   }
+
+  @override
+  Future<Either<Failure, UserEntity>> signInWithGoogle() async{
+    try {
+      var user = await fireBaseAuthService.signInWithGoogle();
+      return right(UserModel.fromFirebaseUser(user));
+    }  catch (e) {
+      log('Exception in AuthRepoImp.signInWithGoogle: ${e.toString()}');
+      return left( ServerFailure(errorMessage: "لقد حدث خطأ. الرجاء المحاولة مرة اخرى"));
+    }
+  }
+
+ @override
+  Future<Either<Failure, UserEntity>> signInWithFacebook() async{
+    try {
+      var user = await fireBaseAuthService.signInWithFacebook();
+      return right(UserModel.fromFirebaseUser(user));
+    }
+     catch (e) {
+      log('Exception in AuthRepoImp.signInWithFacebook: ${e.toString()}');
+      return left( ServerFailure(errorMessage: "لقد حدث خطأ. الرجاء المحاولة مرة اخرى"));
+    }
+  }
+
 }

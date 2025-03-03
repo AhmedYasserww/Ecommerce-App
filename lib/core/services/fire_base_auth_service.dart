@@ -103,4 +103,8 @@ Future<User> signInWithEmailAndPassword({required String email, required String 
     // Once signed in, return the UserCredential
     return (await FirebaseAuth.instance.signInWithCredential(facebookAuthCredential)).user!;
   }
+
+  Future <void> deleteUser() async {
+    await FirebaseAuth.instance.currentUser!.delete();
+  }
 }

@@ -101,11 +101,6 @@ autoValidateMode = AutovalidateMode.always;
                 text: "تسجيل بواسطة جوجل",
               ),
               const SizedBox(height: 16,),
-              CustomSocialButton(
-                  text: "تسجيل بواسطة أبل",
-                  onPressed: (){
-              }, imagePath: AppImages.appleIcon),
-             const SizedBox(height: 16,),
              CustomSocialButton(
                  text: "تسجيل بواسطة فيسبوك",
                  onPressed: (){

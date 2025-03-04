@@ -9,15 +9,18 @@ class Assets {
   static const String imagesAppIcon = 'assets/images/app_icon.png';
   static const String imagesAppleIcon = 'assets/images/apple_icon.svg';
   static const String imagesBackGroundPageViewItem1 = 'assets/images/backGround_pageView_item1.svg';
+  static const String imagesCheck = 'assets/images/check.svg';
   static const String imagesCircles = 'assets/images/circles.svg';
   static const String imagesFaceBookIcon = 'assets/images/face_book_icon.svg';
   static const String imagesFruitHub = 'assets/images/fruit_hub.svg';
   static const String imagesGoogleIcon = 'assets/images/google_icon.svg';
   static const String imagesIconBackArrow = 'assets/images/icon_back_arrow.svg';
+  static const String imagesNotificationIcon = 'assets/images/notification_icon.svg';
   static const String imagesPageViewItem1BackGround = 'assets/images/page_view_item1_back_ground.svg';
   static const String imagesPageViewItem1Image = 'assets/images/page_view_item1_image.svg';
   static const String imagesPageViewItem2BackGround = 'assets/images/page_view_item2_back_ground.svg';
   static const String imagesPageViewItem2Image = 'assets/images/page_view_item2_image.svg';
   static const String imagesPlant = 'assets/images/plant.svg';
+  static const String imagesProfileImage = 'assets/images/profile_image.png';
 
 }

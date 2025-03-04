@@ -11,5 +11,8 @@ class AppImages {
   static const String faceBookIcon = 'assets/images/face_book_icon.svg';
   static const String googleIcon = 'assets/images/google_icon.svg';
   static const String checkIcon = 'assets/images/check.svg';
-
+  static const String profileImage = 'assets/images/profile_image.png';
+  static const String notificationIcon = 'assets/images/notification_icon.svg';
+  static const String searchIcon  = 'assets/images/search_icon.svg';
+  static const String filterIcon = 'assets/images/filter_icon.svg';
 }

@@ -4,6 +4,7 @@ import 'package:ecommerce_app/core/widgets/custom_progress_hud.dart';
 import 'package:ecommerce_app/features/auth/domain/repos/auth_repo.dart';
 import 'package:ecommerce_app/features/auth/presentation/manager/sign_in_cubit/sign_in_cubit.dart';
 import 'package:ecommerce_app/features/auth/presentation/views/widgets/sign_in_view_body.dart';
+import 'package:ecommerce_app/features/home/presentation/views/home_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 class SignInViewBodyBlocConsumer extends StatelessWidget {
@@ -19,6 +20,9 @@ class SignInViewBodyBlocConsumer extends StatelessWidget {
           listener: (context,state){
 if(state is SignInFailure){
   buildErrorBar(context, state.errorMessage);
+}
+if(state is SignInSuccess){
+ Navigator.of(context).pushNamed(HomeView.routeName);
 }
     },
           builder: (context,state) {

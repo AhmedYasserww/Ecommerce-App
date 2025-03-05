@@ -15,4 +15,6 @@ class AppImages {
   static const String notificationIcon = 'assets/images/notification_icon.svg';
   static const String searchIcon  = 'assets/images/search_icon.svg';
   static const String filterIcon = 'assets/images/filter_icon.svg';
+  static const String watermillonTest = 'assets/images/watermillon_test.png';
+  static const String featuredItemShape = 'assets/images/featured_item_shape.svg';
 }

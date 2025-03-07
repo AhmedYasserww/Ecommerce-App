@@ -17,4 +17,14 @@ class AppImages {
   static const String filterIcon = 'assets/images/filter_icon.svg';
   static const String watermillonTest = 'assets/images/watermillon_test.png';
   static const String featuredItemShape = 'assets/images/featured_item_shape.svg';
+  static const String profileIcon = 'assets/images/profile_icon.svg';
+  static const String profileIconSelected = 'assets/images/profile_icon_selected.svg';
+  static const String homeIcon = 'assets/images/home_icon.svg';
+  static const String homeIconSelected = 'assets/images/home_icon_selected.svg';
+  static const String cartIcon = 'assets/images/cart_icon.svg';
+  static const String cartIconSelected = 'assets/images/cart_icon_selected.svg';
+  static const String productsIconSelected = 'assets/images/products_icon_selected.svg';
+  static const String productsIcon = 'assets/images/products_icon.svg';
+
+
 }

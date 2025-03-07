@@ -9,11 +9,18 @@ class Assets {
   static const String imagesAppIcon = 'assets/images/app_icon.png';
   static const String imagesAppleIcon = 'assets/images/apple_icon.svg';
   static const String imagesBackGroundPageViewItem1 = 'assets/images/backGround_pageView_item1.svg';
+  static const String imagesCartIcon = 'assets/images/cart_icon.svg';
+  static const String imagesCartIconSelected = 'assets/images/cart_icon_selected.svg';
   static const String imagesCheck = 'assets/images/check.svg';
   static const String imagesCircles = 'assets/images/circles.svg';
+  static const String productsIcon = 'assets/images/products_icon.svg';
   static const String imagesFaceBookIcon = 'assets/images/face_book_icon.svg';
+  static const String imagesFeaturedItemShape = 'assets/images/featured_item_shape.svg';
+  static const String imagesFilterIcon = 'assets/images/filter_icon.svg';
   static const String imagesFruitHub = 'assets/images/fruit_hub.svg';
   static const String imagesGoogleIcon = 'assets/images/google_icon.svg';
+  static const String imagesHomeIcon = 'assets/images/home_icon.svg';
+  static const String imagesHomeIconSelected = 'assets/images/home_icon_selected.svg';
   static const String imagesIconBackArrow = 'assets/images/icon_back_arrow.svg';
   static const String imagesNotificationIcon = 'assets/images/notification_icon.svg';
   static const String imagesPageViewItem1BackGround = 'assets/images/page_view_item1_back_ground.svg';
@@ -21,6 +28,11 @@ class Assets {
   static const String imagesPageViewItem2BackGround = 'assets/images/page_view_item2_back_ground.svg';
   static const String imagesPageViewItem2Image = 'assets/images/page_view_item2_image.svg';
   static const String imagesPlant = 'assets/images/plant.svg';
+  static const String productsIconSelected = 'assets/images/products_icon_selected.svg';
+  static const String imagesProfileIcon = 'assets/images/profile_icon.svg';
+  static const String imagesProfileIconSelected = 'assets/images/profile_icon_selected.svg';
   static const String imagesProfileImage = 'assets/images/profile_image.png';
+  static const String imagesSearchIcon = 'assets/images/search_icon.svg';
+  static const String imagesWatermillonTest = 'assets/images/watermillon_test.png';
 
 }

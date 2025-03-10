@@ -4,6 +4,7 @@ import 'package:ecommerce_app/core/services/get_it_service.dart';
 import 'package:ecommerce_app/core/services/shared_preferences_singleton.dart';
 import 'package:ecommerce_app/core/utils/app_color.dart';
 import 'package:ecommerce_app/features/home/presentation/views/home_view.dart';
+import 'package:ecommerce_app/features/splash/presentation/views/splash_view.dart';
 import 'package:ecommerce_app/firebase_options.dart';
 import 'package:ecommerce_app/generated/l10n.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -46,8 +47,8 @@ class MyApp extends StatelessWidget {
       supportedLocales: S.delegate.supportedLocales,
       debugShowCheckedModeBanner: false,
       onGenerateRoute: onGenerateRoutes,
-      //initialRoute: SplashView.routeName,
-        initialRoute: HomeView.routeName
+      initialRoute: SplashView.routeName,
+       // initialRoute: HomeView.routeName
 
     );
   }

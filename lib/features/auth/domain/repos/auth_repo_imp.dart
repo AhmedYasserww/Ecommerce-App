@@ -1,9 +1,12 @@
+import 'dart:convert';
 import 'dart:developer';
 import 'package:dartz/dartz.dart';
+import 'package:ecommerce_app/constants.dart';
 import 'package:ecommerce_app/core/errors/exceptions.dart';
 import 'package:ecommerce_app/core/errors/failures.dart';
 import 'package:ecommerce_app/core/services/data_base_service.dart';
 import 'package:ecommerce_app/core/services/fire_base_auth_service.dart';
+import 'package:ecommerce_app/core/services/shared_preferences_singleton.dart';
 import 'package:ecommerce_app/core/utils/backend_endpoint.dart';
 import 'package:ecommerce_app/features/auth/data/models/user_model.dart';
 import 'package:ecommerce_app/features/auth/domain/entites/user_entity.dart';
@@ -54,6 +57,7 @@ class AuthRepoImp implements AuthRepo {
     try {
       var user = await fireBaseAuthService.signInWithEmailAndPassword(email: email, password: password);
       var userEntity = await getUserData(documentId: user.uid);
+      await saveUserData(userEntity: userEntity);
 
       return right(userEntity);
     } on CustomException catch (e) {
@@ -73,6 +77,7 @@ class AuthRepoImp implements AuthRepo {
        var isUserExist = await databaseService.checkIfDataExists(path: BackEndEndpoint.isUserExist, documentId: userEntity.uId);
        if(isUserExist){
          await getUserData(documentId: userEntity.uId);
+       //  await saveUserData(userEntity: userEntity);
        }
        else{
          await addUserData(userEntity: userEntity);
@@ -99,6 +104,7 @@ class AuthRepoImp implements AuthRepo {
        }
        else{
          await addUserData(userEntity: userEntity);
+         await saveUserData(userEntity: userEntity);
        }
        return right(userEntity);
     }
@@ -113,7 +119,7 @@ class AuthRepoImp implements AuthRepo {
 
   @override
   Future addUserData({required UserEntity userEntity}) async{
-     await databaseService.addData(path: BackEndEndpoint.addUserData, data: userEntity.toMap(),
+     await databaseService.addData(path: BackEndEndpoint.addUserData, data: UserModel.fromEntity(userEntity).toMap(),
        documentId: userEntity.uId
      );
 
@@ -124,6 +130,13 @@ class AuthRepoImp implements AuthRepo {
   Future<UserEntity> getUserData({required String documentId}) async{
     var data = await databaseService.getData(path: BackEndEndpoint.getUserData, documentId: documentId);
     return UserModel.fromJson(data);
+  }
+
+  @override
+  Future saveUserData({required UserEntity userEntity}) async{
+    var jsonData = jsonEncode(UserModel.fromEntity(userEntity).toMap());
+    await Prefs.setString(kUserData, jsonData);
+
   }
 
 }
